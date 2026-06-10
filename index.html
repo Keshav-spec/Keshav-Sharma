@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Keshav Sharma | AI &amp; Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e3e2e1",
+                        "surface-tint": "#904d00",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-surface-variant": "#554336",
+                        "inverse-surface": "#2f3130",
+                        "surface": "#faf9f8",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#dadad9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0f2008",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e3e2e1",
+                        "tertiary-fixed-dim": "#ccc5c1",
+                        "secondary": "#516445",
+                        "on-tertiary-fixed-variant": "#4a4643",
+                        "primary-fixed": "#ffdcc3",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e8e1dd",
+                        "on-secondary-container": "#556849",
+                        "tertiary-container": "#797470",
+                        "outline-variant": "#dbc2b0",
+                        "primary": "#8d4b00",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#394c2f",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f1f0f0",
+                        "secondary-fixed": "#d3e9c3",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f4f3f2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1e1b19",
+                        "on-primary-fixed": "#2f1500",
+                        "secondary-fixed-dim": "#b7cda8",
+                        "inverse-primary": "#ffb77d",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "surface-container": "#eeeeed",
+                        "primary-fixed-dim": "#ffb77d",
+                        "primary-container": "#b15f00",
+                        "background": "#faf9f8",
+                        "outline": "#887364",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "tertiary": "#605b58",
+                        "secondary-container": "#d0e7c0"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "stack-md": "32px",
+                        "margin-desktop": "64px",
+                        unit: "8px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        gutter: "24px",
+                        "stack-lg": "64px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "500" }],
+                        "label-sm": ["12px", { lineHeight: "1.0", fontWeight: "500" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-body-md text-body-md">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-3xl border-b border-surface-variant h-20">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-full">
+        <a href="index.html" class="font-display-lg text-body-lg font-bold tracking-tight text-primary">KESHAV.DEV</a>
+        <div class="hidden md:flex items-center gap-stack-md font-body-md text-label-md">
+            <a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+        </div>
+        <a href="#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md">Let's Talk</a>
+    </div>
+</nav>
+
+<!-- Background Atmospheric Effects -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] animate-blob"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[100px] animate-blob animation-delay-2000"></div>
+</div>
+
+<main>
+    <!-- Hero Section -->
+    <section id="about" class="relative pt-40 pb-stack-lg min-h-[80vh] flex items-center">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-7 space-y-stack-md">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-primary text-label-sm">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    OPEN TO INTERNSHIPS &amp; AI OPPORTUNITIES
+                </div>
+                <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface">
+                    Building <span class="text-primary">AI-powered solutions</span> through data, machine learning, and software engineering.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    I am Keshav Sharma, a Computer Science student specializing in Data Science at VIT Chennai. I build machine learning applications, AI-powered systems, computer vision solutions, and full-stack software projects focused on solving real-world problems.
+                </p>
+                <div class="flex flex-wrap gap-stack-sm pt-4">
+                    <a href="#featured-work" class="primary-btn px-8 py-4 rounded-xl font-label-md text-label-md flex items-center gap-2">
+                        VIEW PROJECTS <span class="material-symbols-outlined">arrow_downward</span>
+                    </a>
+                    <a href="#about" class="secondary-btn px-8 py-4 rounded-xl font-label-md text-label-md">ABOUT ME</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative mt-12 lg:mt-0">
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden glass-card p-3 shadow-xl shadow-surface-variant/50">
+                    <div class="w-full h-full rounded-[1.5rem] overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Keshav Sharma" src="assets/profile.jpg"/>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl hidden md:block shadow-lg">
+                    <div class="text-primary text-headline-md font-bold">15+</div>
+                    <div class="text-on-surface-variant text-label-sm">Projects Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Overview Section -->
+    <section id="services" class="py-stack-lg bg-surface-container-low/30 border-y border-surface-variant">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-4">
+                    <h2 class="font-headline-md text-on-surface mb-4">Resume Overview</h2>
+                    <p class="text-on-surface-variant mb-6">Combining data science, artificial intelligence, and software engineering to build impactful real-world solutions.</p>
+                    <a href="assets/resume.pdf" class="secondary-btn px-8 py-3 rounded-xl font-label-md inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined">download</span> DOWNLOAD RESUME
+                    </a>
+                </div>
+                <div class="lg:col-span-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="p-6 glass-card rounded-2xl border-none bg-white">
+                            <span class="material-symbols-outlined text-primary mb-3">category</span>
+                            <h4 class="font-bold text-on-surface mb-1">Machine Learning</h4>
+                            <p class="text-on-surface-variant text-label-sm">Scikit-Learn, TensorFlow, PyTorch</p>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border-none bg-white">
+                            <span class="material-symbols-outlined text-primary mb-3">code</span>
+                            <h4 class="font-bold text-on-surface mb-1">Data Science</h4>
+                            <p class="text-on-surface-variant text-label-sm">Python, Pandas, NumPy, Power BI</p>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border-none bg-white">
+                            <span class="material-symbols-outlined text-primary mb-3">animation</span>
+                            <h4 class="font-bold text-on-surface mb-1">Computer Vision</h4>
+                            <p class="text-on-surface-variant text-label-sm">OpenCV, CNNs, Vision Transformers</p>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border-none bg-white">
+                            <span class="material-symbols-outlined text-primary mb-3">terminal</span>
+                            <h4 class="font-bold text-on-surface mb-1">AI &amp; Deployment</h4>
+                            <p class="text-on-surface-variant text-label-sm">Flask, FastAPI, Streamlit, GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="featured-work" class="py-stack-lg bg-surface">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-gutter">
+                <div class="max-w-xl">
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Featured Work</h2>
+                    <p class="text-on-surface-variant text-body-lg">A collection of AI, machine learning, deep learning, NLP, computer vision, and software engineering projects built to solve practical real-world problems.</p>
+                </div>
+                <a href="projects.html" class="secondary-btn px-8 py-4 rounded-xl font-label-md text-label-md group inline-flex items-center gap-2">
+                    VIEW ALL PROJECTS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <div class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm">
+                    <div class="aspect-[16/10] overflow-hidden image-zoom-container">
+                        <img class="w-full h-full object-cover" alt="Expense Scanner AI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1x-9JjcNW7DejRyalTVWykR6nRaQmnNPGdxZ-j-neGmoSPlesTDuyFUGF-TLkj2UC4MFroi3naS5ORrQRZV67dSibHfJaIG074OtBT2MJtIB54UKAKDxlLWEsNDMpDHclOXkZUeJ1kgk4I-XAE2dxTW6GAa-SXFP2EoR78bOiw8kIApRsy_iiLa-9-tuPd8EE-Zr30YvZoveEdyue7lcVrfOimf5asTKKOXN6XuBYWgVCekqwSQo69Trc3MnXvnztPGCNkZMStzs"/>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">AI</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">OCR</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">Expense Scanner AI</h3>
+                        <p class="text-on-surface-variant line-clamp-2">AI-powered expense management platform using EasyOCR and OpenCV to automatically extract merchant names, dates, categories, and amounts from receipts.</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm">
+                    <div class="aspect-[16/10] overflow-hidden image-zoom-container">
+                        <img class="w-full h-full object-cover" alt="PDF Research Assistant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagBhBZ3gpHyl6U1h-ajzx-QPFKT5HkLSt5i0_Vh8JcunpciYIzGJdloiheohxDfsUrWNUFKnW-wUVQ0LLNXIdQ8I-9KvHHxt7V3Xgaw1GFpalIu_oEplsTX56T1ATPG1zyxmoWflcMygCxRjk8UfeM2KPEu_lnt8JaUVoPnC7FheN8wDvGq0NKVj2LwHJODRodyJUcYyjP00SBcbEZPLN28aNFxYAa3427RcuHiOIbPonJfn2V2lQ7mo2lcVKHXyFIDvENELdS7Y"/>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">LLM</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">NLP</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">PDF Research Assistant</h3>
+                        <p class="text-on-surface-variant line-clamp-2">Chat with PDF documents using Retrieval-Augmented Generation (RAG), vector embeddings, and Large Language Models.</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm">
+                    <div class="aspect-[16/10] overflow-hidden image-zoom-container">
+                        <img class="w-full h-full object-cover" alt="Potato Disease Detection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClblLFdc_x9_ZRI6EelGrKknGNdTYS8pnXUjxY8cyNUQ-CbQ_S3wvQ54ZdYcloZwCmnPZVxlabQaBfUHQiXaWkoQD1yEdSWXgL-Q-1EPEgBx3BriG7S_cLuNbAmBlTj12yfqPVV_BsKgWU1YIzw7mHgpAc4BiGB42Fes2PNoG9RjMXsApbdnbJObbYjOXX0POK2scxsW52IQs_62ZXP7CF1qYAbNfr8OGc2pVqP2upyEQMz8kvKquG54OIvwrpfvZOyriYo9EnjYw"/>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">DEEP LEARNING</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-label-sm font-bold">COMPUTER VISION</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">Potato Disease Detection</h3>
+                        <p class="text-on-surface-variant line-clamp-2">Deep learning model that identifies potato plant diseases from leaf images using computer vision techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-stack-lg text-center">
+                <a href="projects.html" class="secondary-btn px-12 py-5 rounded-2xl font-label-md text-body-lg inline-block">Explore Full Archive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="contact" class="py-stack-lg">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="bg-surface-container-high rounded-[3rem] p-12 md:p-stack-lg grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Connect with Me</h2>
+                    <p class="text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                        I specialize in machine learning, deep learning, computer vision, NLP, and data science projects. I am currently looking for internship opportunities where I can contribute to impactful AI and software engineering solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a class="primary-btn px-8 py-4 rounded-xl font-label-md inline-flex items-center justify-center gap-2" href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">
+                            <span class="material-symbols-outlined">link</span> LINKEDIN
+                        </a>
+                        <a class="secondary-btn px-8 py-4 rounded-xl font-label-md inline-flex items-center justify-center gap-2" href="mailto:keshavsharma71982@gmail.com">
+                            <span class="material-symbols-outlined">mail</span> EMAIL ME
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-8 bg-surface rounded-2xl border border-outline-variant">
+                        <div class="text-primary font-bold mb-2">Location</div>
+                        <div class="text-on-surface">VIT Chennai, India<br/>Open to Remote Opportunities</div>
+                    </div>
+                    <div class="p-8 bg-surface rounded-2xl border border-outline-variant">
+                        <div class="text-primary font-bold mb-2">Work Status</div>
+                        <div class="text-on-surface">Available for Internships<br/>Open to Research Collaborations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-surface-variant w-full py-stack-lg">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+        <div class="space-y-4 text-center md:text-left">
+            <div class="font-display-lg text-headline-md text-primary">KESHAV.DEV</div>
+            <p class="text-on-surface-variant text-body-md">Building intelligent systems through data, AI, and software engineering.</p>
+        </div>
+        <div class="flex flex-col items-center md:items-end gap-6">
+            <div class="flex gap-stack-md font-body-md text-body-md text-secondary">
+                <a class="hover:text-primary transition-colors duration-300" href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="hover:text-primary transition-colors duration-300" href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="hover:text-primary transition-colors duration-300" href="#">Research Paper</a>
+                <a class="hover:text-primary transition-colors duration-300" href="mailto:keshavsharma71982@gmail.com">Email</a>
+            </div>
+            <div class="text-on-surface-variant text-label-sm">© 2026 Keshav Sharma. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
