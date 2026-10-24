@@ -30,3 +30,37 @@ document.querySelectorAll('.primary-btn').forEach(btn => {
     btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
     btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
 });
+
+const projectGrid = document.querySelector('.project-grid');
+if (projectGrid) {
+    const projectCards = [...projectGrid.querySelectorAll(':scope > a[data-category]')];
+    const filterButtons = [...document.querySelectorAll('.filter-button')];
+    const count = document.querySelector('#project-count');
+
+    const applyProjectFilter = (filter) => {
+        let visible = 0;
+        projectCards.forEach(card => {
+            const categories = card.dataset.category.split(/\s+/);
+            const show = filter === 'all' || categories.includes(filter);
+            card.hidden = !show;
+            if (show) visible += 1;
+        });
+        filterButtons.forEach(button => {
+            const active = button.dataset.filter === filter;
+            button.classList.toggle('is-active', active);
+            button.setAttribute('aria-pressed', String(active));
+        });
+        if (count) count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'}`;
+    };
+
+    const requestedFilter = new URLSearchParams(window.location.search).get('filter');
+    const validFilter = filterButtons.some(button => button.dataset.filter === requestedFilter) ? requestedFilter : 'all';
+    applyProjectFilter(validFilter);
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+        applyProjectFilter(button.dataset.filter);
+        const url = new URL(window.location.href);
+        if (button.dataset.filter === 'all') url.searchParams.delete('filter');
+        else url.searchParams.set('filter', button.dataset.filter);
+        window.history.replaceState({}, '', url);
+    }));
+}

@@ -4,6 +4,12 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta name="description" content="Explore Keshav Sharma's projects in AI, machine learning, computer vision, NLP, data science, and backend engineering."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Projects | Keshav Sharma"/>
+    <meta property="og:description" content="Selected work in AI, backend systems, machine learning, computer vision, NLP, and data science."/>
+    <meta property="og:image" content="assets/profile.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
     <title>Project Archive | KESHAV</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -79,11 +85,18 @@
             <p class="text-on-surface-variant max-w-2xl">Selected work across AI applications, backend systems, machine learning, computer vision, NLP, and data science. Open a project on GitHub to explore its code and implementation.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <div class="project-filters flex flex-wrap gap-3 mb-8" role="group" aria-label="Filter projects by category">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+            <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI &amp; NLP</button>
+            <button class="filter-button" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+            <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data science</button>
+            <button class="filter-button" type="button" data-filter="vision" aria-pressed="false">Computer vision</button>
+        </div>
+        <p id="project-count" class="text-on-surface-variant text-label-sm mb-6" aria-live="polite"></p>
+
+        <div class="project-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
             <!-- Expense Scanner AI -->
-<a href="https://github.com/Keshav-spec/Automated-Expense-Receipt-Scanner"
-   target="_blank"
-   rel="noopener noreferrer"
+<a data-category="ai data" href="expense-scanner.html"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
@@ -104,16 +117,14 @@
             AI-powered expense management platform using EasyOCR and OpenCV to automatically extract merchant names, dates, categories, and amounts from receipts.
         </p>
 
-        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
 </a>
 
 <!-- RedisLite -->
-<a href="https://github.com/Keshav-spec/kvstore"
-   target="_blank"
-   rel="noopener noreferrer"
+<a data-category="backend" href="redislite.html"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
@@ -145,7 +156,7 @@
             Redis-inspired in-memory key-value database featuring a custom RESP parser, multithreaded TCP server, LRU cache, TTL expiration, Write-Ahead Logging, and crash recovery.
         </p>
 
-        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
             <span class="material-symbols-outlined text-primary">
                 open_in_new
             </span>
@@ -156,9 +167,7 @@
 
 <!-- API Rate Limiter Library -->
 
-<a href="https://github.com/Keshav-spec/api-rate-limiter"
-target="_blank"
-rel="noopener noreferrer"
+<a data-category="backend" href="api-rate-limiter.html"
 class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
 
@@ -180,7 +189,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         Published Python library implementing Fixed Window, Sliding Window, Token Bucket, and Leaky Bucket algorithms with Redis support and Flask/FastAPI middleware integration.
     </p>
 
-    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
         <span class="material-symbols-outlined text-primary">
             open_in_new
         </span>
@@ -191,7 +200,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- PDF Research Assistant -->
-<a href="https://github.com/Keshav-spec/Docwise"
+<a data-category="ai" href="https://github.com/Keshav-spec/Docwise"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -221,7 +230,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- Stock Anomaly Detection -->
-<a href="https://github.com/Keshav-spec/stock-anomaly-detector"
+<a data-category="data" href="https://github.com/Keshav-spec/stock-anomaly-detector"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -251,7 +260,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- Credit Risk Scoreboard -->
-<a href="https://github.com/Keshav-spec/credit-risk-scoreboard"
+<a data-category="data" href="https://github.com/Keshav-spec/credit-risk-scoreboard"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -279,7 +288,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </div>
     </div>
 </a>
-                <a href="https://github.com/Keshav-spec/CLV-engine"
+                <a data-category="data" href="https://github.com/Keshav-spec/CLV-engine"
        target="_blank"
        rel="noopener noreferrer"
        class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -310,7 +319,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </div>
     </a>
                 <!-- Potato Disease Detection -->
-<a href="https://github.com/Keshav-spec/Disease-Detection-in-Potato-Plants"
+<a data-category="vision" href="https://github.com/Keshav-spec/Disease-Detection-in-Potato-Plants"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -340,7 +349,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- Bone Marrow Classification -->
-<a href="https://github.com/Keshav-spec/Bone-Marrow-Classification"
+<a data-category="vision" href="https://github.com/Keshav-spec/Bone-Marrow-Classification"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -370,7 +379,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- Brain Tumor Analysis -->
-<a href="https://github.com/Keshav-spec/Brain-Tumor-Analysis"
+<a data-category="vision" href="https://github.com/Keshav-spec/Brain-Tumor-Analysis"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
@@ -400,7 +409,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 </a>
 
 <!-- Comment Toxicity Detection -->
-<a href="https://github.com/Keshav-spec/Comment-Toxicity-Model"
+<a data-category="ai" href="https://github.com/Keshav-spec/Comment-Toxicity-Model"
    target="_blank"
    rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">

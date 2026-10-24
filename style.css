@@ -9,6 +9,8 @@ a, button, summary { outline-offset: 4px; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #8d4b00; }
 .mobile-menu-panel a { display: block; border-radius: .75rem; padding: .65rem .75rem; color: #554336; }
 .mobile-menu-panel a:hover, .mobile-menu-panel a:focus-visible { background: #f4f3f2; color: #8d4b00; }
+.filter-button { border: 1px solid #dbc2b0; border-radius: 999px; background: #fff; color: #554336; padding: .7rem 1rem; font: 600 14px/1 Inter, sans-serif; cursor: pointer; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+.filter-button:hover, .filter-button.is-active { background: #8d4b00; border-color: #8d4b00; color: #fff; }
 
 .glass-card {
     background: rgba(255, 255, 255, 0.7);

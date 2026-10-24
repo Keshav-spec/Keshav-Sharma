@@ -4,6 +4,15 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta name="description" content="Keshav Sharma is a Computer Science student at VIT Chennai building machine learning, AI, computer vision, and software projects. Explore projects, skills, and contact details."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Keshav Sharma | AI &amp; Data Science Portfolio"/>
+    <meta property="og:description" content="Explore Keshav Sharma's projects in AI, machine learning, computer vision, and software engineering."/>
+    <meta property="og:image" content="assets/profile.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Keshav Sharma | AI &amp; Data Science Portfolio"/>
+    <meta name="twitter:description" content="Explore projects in AI, machine learning, computer vision, and software engineering."/>
+    <meta name="twitter:image" content="assets/profile.png"/>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
     <title>Keshav Sharma | AI &amp; Data Science Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -191,22 +200,22 @@
                         <div class="p-6 glass-card rounded-2xl border-none bg-white">
                             <span class="material-symbols-outlined text-primary mb-3">category</span>
                             <h4 class="font-bold text-on-surface mb-1">Machine Learning</h4>
-                            <p class="text-on-surface-variant text-label-sm">Scikit-Learn, TensorFlow, PyTorch</p>
+                            <p class="text-on-surface-variant text-label-sm">Scikit-Learn, TensorFlow, PyTorch</p><a class="inline-block mt-3 text-label-sm text-primary underline" href="projects.html?filter=ai">See AI projects</a>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border-none bg-white">
                             <span class="material-symbols-outlined text-primary mb-3">code</span>
                             <h4 class="font-bold text-on-surface mb-1">Data Analysis</h4>
-                            <p class="text-on-surface-variant text-label-sm">Tableau, Power BI</p>
+                            <p class="text-on-surface-variant text-label-sm">Tableau, Power BI</p><a class="inline-block mt-3 text-label-sm text-primary underline" href="projects.html?filter=data">See data projects</a>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border-none bg-white">
                             <span class="material-symbols-outlined text-primary mb-3">animation</span>
                             <h4 class="font-bold text-on-surface mb-1">Computer Vision</h4>
-                            <p class="text-on-surface-variant text-label-sm">OpenCV, CNNs, Vision Transformers</p>
+                            <p class="text-on-surface-variant text-label-sm">OpenCV, CNNs, Vision Transformers</p><a class="inline-block mt-3 text-label-sm text-primary underline" href="projects.html?filter=vision">See vision projects</a>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border-none bg-white">
                             <span class="material-symbols-outlined text-primary mb-3">terminal</span>
                             <h4 class="font-bold text-on-surface mb-1">AI &amp; Deployment</h4>
-                            <p class="text-on-surface-variant text-label-sm">Flask, FastAPI, Streamlit, GitHub</p>
+                            <p class="text-on-surface-variant text-label-sm">Flask, FastAPI, Streamlit, GitHub</p><a class="inline-block mt-3 text-label-sm text-primary underline" href="projects.html?filter=backend">See backend projects</a>
                         </div>
                     </div>
                 </div>
@@ -229,9 +238,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 
     <!-- Expense Scanner AI -->
-    <a href="https://github.com/Keshav-spec/Automated-Expense-Receipt-Scanner"
-       target="_blank"
-       rel="noopener noreferrer"
+    <a href="expense-scanner.html"
        class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
         <div class="aspect-[16/10] overflow-hidden image-zoom-container">
@@ -252,7 +259,7 @@
                 Turns receipt images into structured expense details. EasyOCR and OpenCV extract merchant, date, category, and amount to reduce manual entry.
             </p>
 
-            <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+                    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
                 <span class="material-symbols-outlined text-primary">
                     open_in_new
                 </span>
@@ -262,9 +269,7 @@
 
     
 <!-- RedisLite -->
-<a href="https://github.com/Keshav-spec/kvstore"
-   target="_blank"
-   rel="noopener noreferrer"
+                    <a href="redislite.html"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
@@ -296,7 +301,7 @@
             A Redis-inspired in-memory key-value store built around a custom RESP parser and multithreaded TCP server, with LRU eviction, TTL expiration, write-ahead logging, and crash recovery.
         </p>
 
-        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
             <span class="material-symbols-outlined text-primary">
                 open_in_new
             </span>
@@ -307,9 +312,7 @@
 
     <!-- API Rate Limiter Library -->
 
-<a href="https://github.com/Keshav-spec/api-rate-limiter"
-target="_blank"
-rel="noopener noreferrer"
+<a href="api-rate-limiter.html"
 class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
 
@@ -331,7 +334,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         Python library for protecting APIs from excessive requests. Compare Fixed Window, Sliding Window, Token Bucket, and Leaky Bucket strategies, with Redis support and Flask/FastAPI middleware.
     </p>
 
-    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
+    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">READ CASE STUDY</span>
         <span class="material-symbols-outlined text-primary">
             open_in_new
         </span>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Case study: RedisLite, an in-memory key-value store with a custom RESP parser, TCP server, caching, TTL, and persistence."/>
+    <meta property="og:title" content="RedisLite | Keshav Sharma"/><meta property="og:description" content="A Redis-inspired in-memory key-value database project."/><meta property="og:image" content="assets/p11.png"/>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/><title>RedisLite | Keshav Sharma</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e3e2e1",
+                        "surface-tint": "#904d00",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-surface-variant": "#554336",
+                        "inverse-surface": "#2f3130",
+                        "surface": "#faf9f8",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#dadad9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0f2008",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e3e2e1",
+                        "tertiary-fixed-dim": "#ccc5c1",
+                        "secondary": "#516445",
+                        "on-tertiary-fixed-variant": "#4a4643",
+                        "primary-fixed": "#ffdcc3",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e8e1dd",
+                        "on-secondary-container": "#556849",
+                        "tertiary-container": "#797470",
+                        "outline-variant": "#dbc2b0",
+                        "primary": "#8d4b00",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#394c2f",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f1f0f0",
+                        "secondary-fixed": "#d3e9c3",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f4f3f2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1e1b19",
+                        "on-primary-fixed": "#2f1500",
+                        "secondary-fixed-dim": "#b7cda8",
+                        "inverse-primary": "#ffb77d",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "surface-container": "#eeeeed",
+                        "primary-fixed-dim": "#ffb77d",
+                        "primary-container": "#b15f00",
+                        "background": "#faf9f8",
+                        "outline": "#887364",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "tertiary": "#605b58",
+                        "secondary-container": "#d0e7c0"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "stack-md": "32px",
+                        "margin-desktop": "64px",
+                        unit: "8px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        gutter: "24px",
+                        "stack-lg": "64px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "500" }],
+                        "label-sm": ["12px", { lineHeight: "1.0", fontWeight: "500" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/><link rel="stylesheet" href="style.css"/>
+</head>
+<body class="font-body-md text-body-md"><nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-3xl border-b border-surface-variant h-20"><div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-full"><a href="index.html" class="font-headline-lg text-headline-sm font-bold tracking-tight text-primary">KESHAV</a><div class="hidden md:flex items-center gap-8 font-body-md text-label-md"><a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html#featured-work">Work</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#about">About</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#skills">Skills</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#contact">Contact</a></div><details class="mobile-menu md:hidden relative"><summary class="secondary-btn rounded-full px-4 py-2 cursor-pointer font-label-md text-label-md" aria-label="Open navigation menu">MENU</summary><div class="mobile-menu-panel absolute right-0 mt-3 w-48 rounded-2xl bg-white p-3 shadow-xl border border-surface-variant flex flex-col gap-2"><a href="index.html#featured-work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#contact">Contact</a></div></details><a href="index.html#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md hidden sm:inline-flex">Let's Talk</a></div></nav><div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden"><div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] animate-blob"></div><div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[100px] animate-blob animation-delay-2000"></div></div>
+<main class="pt-40 pb-stack-lg"><article class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center mt-8"><div class="lg:col-span-7 space-y-6"><a href="projects.html" class="secondary-btn inline-flex px-5 py-3 rounded-xl">← All projects</a><p class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-primary text-label-sm">SYSTEMS · DATABASES · NETWORKING</p><h1 class="font-headline-lg text-[32px] md:text-[48px] text-on-surface">RedisLite</h1><p class="text-body-lg text-on-surface-variant max-w-xl">A Redis-inspired in-memory key-value database that brings together a custom protocol parser, a multithreaded TCP server, cache management, expiration, and recovery features.</p></div><div class="lg:col-span-5 rounded-[2rem] overflow-hidden glass-card p-3 shadow-xl"><img src="assets/p11.png" alt="RedisLite project preview" class="w-full rounded-[1.5rem]" width="800" height="500" fetchpriority="high"/></div></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"><section class="glass-card rounded-2xl p-6"><h2 class="font-headline-md mb-3">Protocol and server</h2><p class="text-on-surface-variant">Implements a custom RESP parser and multithreaded TCP server, connecting network clients to the key-value store.</p></section><section class="glass-card rounded-2xl p-6"><h2 class="font-headline-md mb-3">Memory behavior</h2><p class="text-on-surface-variant">Includes LRU cache eviction for managing retained keys and TTL-based expiration for values that should only live for a limited time.</p></section><section class="glass-card rounded-2xl p-6"><h2 class="font-headline-md mb-3">Persistence</h2><p class="text-on-surface-variant">Uses write-ahead logging and supports crash recovery, extending the project beyond a purely transient in-memory store.</p></section></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16"><section class="glass-card rounded-2xl p-8"><h2 class="font-headline-md text-on-surface mb-4">How the pieces fit</h2><p class="text-on-surface-variant mb-4">The TCP server accepts client connections and the RESP parser turns the incoming protocol messages into commands the store can handle. The in-memory key-value layer is then responsible for keeping values, expiring keys by TTL, and applying LRU eviction.</p><p class="text-on-surface-variant">The persistence layer adds another concern: recording writes so state can be recovered after an unexpected stop. Together these parts make the project a compact systems exercise in networking, storage, and recovery.</p></section><section class="glass-card rounded-2xl p-8"><h2 class="font-headline-md text-on-surface mb-4">What I’d validate next</h2><p class="text-on-surface-variant">A focused validation plan would cover concurrent client requests, exact TTL expiration behavior, LRU eviction order, malformed protocol messages, and recovery after restart. These are proposed checks, not claims about existing test coverage.</p></section></div><div class="mt-12 flex flex-wrap gap-4"><a class="primary-btn px-8 py-4 rounded-xl font-label-md" href="https://github.com/Keshav-spec/kvstore" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a><a class="secondary-btn px-8 py-4 rounded-xl font-label-md" href="mailto:keshavsharma71982@gmail.com">Ask me about this project</a></div></article></main><footer class="bg-white/80 border-t border-surface-variant w-full py-12"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6"><p class="text-on-surface-variant">Building intelligent systems through data, AI, and software engineering.</p><div class="flex gap-6 text-secondary"><a href="https://github.com/Keshav-spec" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/keshav-sharma-0396b1287/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:keshavsharma71982@gmail.com">Email</a></div></div></footer><script src="script.js"></script></body></html>
