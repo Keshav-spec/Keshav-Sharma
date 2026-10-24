@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Explore Keshav Sharma's projects in AI, machine learning, computer vision, NLP, data science, and backend engineering."/>
     <title>Project Archive | KESHAV</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -60,10 +61,11 @@
         <div class="hidden md:flex items-center gap-stack-md font-body-md text-label-md">
             <a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Work</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#about">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#skills">Skills</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html#contact">Contact</a>
         </div>
-        <a href="index.html#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md">Let's Talk</a>
+        <details class="mobile-menu md:hidden relative"><summary class="secondary-btn rounded-full px-4 py-2 cursor-pointer font-label-md text-label-md" aria-label="Open navigation menu">MENU</summary><div class="mobile-menu-panel absolute right-0 mt-3 w-48 rounded-2xl bg-white p-3 shadow-xl border border-surface-variant flex flex-col gap-2"><a href="index.html#featured-work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#contact">Contact</a></div></details>
+        <a href="index.html#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md hidden sm:inline-flex">Let's Talk</a>
     </div>
 </nav>
 
@@ -73,8 +75,8 @@
             <a href="index.html" class="secondary-btn px-6 py-3 rounded-xl font-label-md inline-flex items-center gap-2 mb-8">
                 <span class="material-symbols-outlined">arrow_back</span> BACK TO HOME
             </a>
-            <h1 class="font-headline-lg text-headline-lg text-on-surface mb-4">Full Project Archive</h1>
-            <p class="text-on-surface-variant max-w-2xl">A complete collection of design and development work spanning branding, product, and systems engineering.</p>
+            <h1 class="font-headline-lg text-headline-lg text-on-surface mb-4">Projects</h1>
+            <p class="text-on-surface-variant max-w-2xl">Selected work across AI applications, backend systems, machine learning, computer vision, NLP, and data science. Open a project on GitHub to explore its code and implementation.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -85,7 +87,7 @@
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Expense Scanner AI" src="assets/p1.png"/>
+        <img class="w-full h-full object-cover" alt="Expense Scanner AI" src="assets/p1.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -102,7 +104,7 @@
             AI-powered expense management platform using EasyOCR and OpenCV to automatically extract merchant names, dates, categories, and amounts from receipts.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -117,7 +119,7 @@
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
         <img class="w-full h-full object-cover"
              alt="RedisLite"
-             src="assets/p11.png"/>
+             src="assets/p11.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -143,7 +145,7 @@
             Redis-inspired in-memory key-value database featuring a custom RESP parser, multithreaded TCP server, LRU cache, TTL expiration, Write-Ahead Logging, and crash recovery.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">
                 open_in_new
             </span>
@@ -161,7 +163,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 
 
 <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-    <img class="w-full h-full object-cover" alt="API Rate Limiter Library" src="assets/p10.png"/>
+    <img class="w-full h-full object-cover" alt="API Rate Limiter Library" src="assets/p10.png" width="800" height="500" loading="lazy"/>
 </div>
 
 <div class="p-8">
@@ -178,7 +180,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         Published Python library implementing Fixed Window, Sliding Window, Token Bucket, and Leaky Bucket algorithms with Redis support and Flask/FastAPI middleware integration.
     </p>
 
-    <div class="flex justify-end mt-4">
+    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
         <span class="material-symbols-outlined text-primary">
             open_in_new
         </span>
@@ -195,7 +197,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="PDF Research Assistant" src="assets/p9.png"/>
+        <img class="w-full h-full object-cover" alt="PDF Research Assistant" src="assets/p9.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -209,10 +211,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Chat with PDF documents using Retrieval-Augmented Generation (RAG), vector embeddings, and Large Language Models.
+            Ask questions about PDF documents with a retrieval-augmented generation workflow that uses vector embeddings to find relevant context for a large language model.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -225,7 +227,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Stock Anomaly Detection" src="assets/p4.png"/>
+        <img class="w-full h-full object-cover" alt="Stock Anomaly Detection" src="assets/p4.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -239,10 +241,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Machine learning system designed to detect unusual market movements and identify potential anomalies in stock trading data.
+            Detects unusual patterns in stock trading data with machine learning, helping users surface market movements for closer inspection.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -255,7 +257,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Credit Risk Scoreboard" src="assets/p2.png"/>
+        <img class="w-full h-full object-cover" alt="Credit Risk Scoreboard" src="assets/p2.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -269,10 +271,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Predictive analytics platform for assessing customer creditworthiness and visualizing financial risk metrics.
+            A predictive analytics dashboard for exploring credit risk scores and related financial risk metrics.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -283,7 +285,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
        class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
         <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-            <img class="w-full h-full object-cover" alt="Customer Lifetime Value Engine" src="assets/p3.png"/>
+            <img class="w-full h-full object-cover" alt="Customer Lifetime Value Engine" src="assets/p3.png" width="800" height="500" loading="lazy"/>
         </div>
 
         <div class="p-8">
@@ -297,10 +299,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
             </h3>
 
             <p class="text-on-surface-variant line-clamp-2">
-                Customer Lifetime Value prediction system that forecasts long-term customer revenue and supports business decision-making.
+                Forecasts customer lifetime value to help compare expected long-term revenue across customers and inform business decisions.
             </p>
 
-            <div class="flex justify-end mt-4">
+            <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
                 <span class="material-symbols-outlined text-primary">
                     open_in_new
                 </span>
@@ -314,7 +316,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Potato Disease Detection" src="assets/p5.jpg"/>
+        <img class="w-full h-full object-cover" alt="Potato Disease Detection" src="assets/p5.jpg" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -328,10 +330,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Deep learning model that identifies potato plant diseases from leaf images using computer vision techniques.
+            Classifies potato plant leaf images with a deep learning model to identify disease categories using computer vision.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -344,7 +346,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Bone Marrow Classification" src="assets/p6.png"/>
+        <img class="w-full h-full object-cover" alt="Bone Marrow Classification" src="assets/p6.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -358,10 +360,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Deep learning-based medical image classification system for identifying and categorizing bone marrow cell types.
+            Applies deep learning to medical images to classify and categorize bone marrow cell types.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -374,7 +376,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Brain Tumor Analysis" src="assets/p7.png"/>
+        <img class="w-full h-full object-cover" alt="Brain Tumor Analysis" src="assets/p7.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -388,10 +390,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Research-driven hybrid Vision Transformer and EfficientNet model for accurate brain tumor classification from MRI scans.
+            Combines a Vision Transformer and EfficientNet to classify brain tumors from MRI scans.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>
@@ -404,7 +406,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-        <img class="w-full h-full object-cover" alt="Comment Toxicity Detection" src="assets/p8.png"/>
+        <img class="w-full h-full object-cover" alt="Comment Toxicity Detection" src="assets/p8.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -418,10 +420,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Natural Language Processing model that identifies toxic, offensive, and harmful comments to support safer online communities.
+            Uses natural language processing to flag toxic, offensive, and harmful comments for review in online communities.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">open_in_new</span>
         </div>
     </div>

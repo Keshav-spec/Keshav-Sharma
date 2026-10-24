@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Keshav Sharma is a Computer Science student at VIT Chennai building machine learning, AI, computer vision, and software projects. Explore projects, skills, and contact details."/>
     <title>Keshav Sharma | AI &amp; Data Science Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -114,10 +115,16 @@
         <div class="hidden md:flex items-center gap-stack-md font-body-md text-label-md">
             <a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Work</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
         </div>
-        <a href="#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md">Let's Talk</a>
+        <details class="mobile-menu md:hidden relative">
+            <summary class="secondary-btn rounded-full px-4 py-2 cursor-pointer font-label-md text-label-md" aria-label="Open navigation menu">MENU</summary>
+            <div class="mobile-menu-panel absolute right-0 mt-3 w-48 rounded-2xl bg-white p-3 shadow-xl border border-surface-variant flex flex-col gap-2">
+                <a href="#featured-work">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+            </div>
+        </details>
+        <a href="#contact" class="primary-btn px-6 py-2.5 rounded-full font-label-md text-label-md hidden sm:inline-flex">Let's Talk</a>
     </div>
 </nav>
 
@@ -129,7 +136,7 @@
 
 <main>
     <!-- Hero Section -->
-    <section id="about" class="relative pt-40 pb-stack-lg min-h-[80vh] flex items-center">
+    <section id="home" class="relative pt-40 pb-stack-lg min-h-[80vh] flex items-center">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
             <div class="lg:col-span-7 space-y-stack-md">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-primary text-label-sm">
@@ -137,22 +144,23 @@
                     OPEN TO INTERNSHIPS &amp; AI OPPORTUNITIES
                 </div>
                 <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface">
-                    Building <span class="text-primary">AI-powered solutions</span> through data analysis, machine learning, and software engineering.
+                    Computer Science student building <span class="text-primary">AI and data-driven software.</span>
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                    I am Keshav Sharma, a Computer Science student specializing in Data Science at VIT Chennai. I build machine learning applications, AI-powered systems, computer vision solutions, and full-stack software projects focused on solving real-world problems.
+                    I’m Keshav Sharma, a Computer Science student specializing in Data Science at VIT Chennai. I’m seeking internship opportunities where I can contribute to machine learning, AI, and software engineering projects.
                 </p>
                 <div class="flex flex-wrap gap-stack-sm pt-4">
                     <a href="#featured-work" class="primary-btn px-8 py-4 rounded-xl font-label-md text-label-md flex items-center gap-2">
                         VIEW PROJECTS <span class="material-symbols-outlined">arrow_downward</span>
                     </a>
                     <a href="#about" class="secondary-btn px-8 py-4 rounded-xl font-label-md text-label-md">ABOUT ME</a>
+                    <a href="assets/resume.pdf" class="secondary-btn px-8 py-4 rounded-xl font-label-md text-label-md" target="_blank" rel="noopener noreferrer">DOWNLOAD RÉSUMÉ</a>
                 </div>
             </div>
             <div class="lg:col-span-5 relative mt-12 lg:mt-0">
                 <div class="aspect-[4/5] rounded-[2rem] overflow-hidden glass-card p-3 shadow-xl shadow-surface-variant/50">
                     <div class="w-full h-full rounded-[1.5rem] overflow-hidden">
-                        <img class="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700" alt="Keshav Sharma" src="assets/profile.png"/>
+                        <img class="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700" alt="Portrait of Keshav Sharma" src="assets/profile.png" width="800" height="1000" fetchpriority="high"/>
                     </div>
                 </div>
                 
@@ -160,8 +168,15 @@
         </div>
     </section>
 
-    <!-- Resume Overview Section -->
-    <section id="services" class="py-stack-lg bg-surface-container-low/30 border-y border-surface-variant">
+    <section id="about" class="py-stack-lg bg-surface">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop max-w-3xl">
+            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">About</h2>
+            <p class="text-body-lg text-on-surface-variant">I study Computer Science with a specialization in Data Science at VIT Chennai. My projects span machine learning, computer vision, NLP, AI applications, and backend software. I enjoy building practical systems and am currently looking for internship opportunities in AI and software engineering.</p>
+        </div>
+    </section>
+
+    <!-- Skills and resume overview -->
+    <section id="skills" class="py-stack-lg bg-surface-container-low/30 border-y border-surface-variant">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
                 <div class="lg:col-span-4">
@@ -220,7 +235,7 @@
        class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block hover:no-underline">
 
         <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-            <img class="w-full h-full object-cover" alt="Expense Scanner AI" src="assets/p1.png"/>
+                        <img class="w-full h-full object-cover" alt="Expense Scanner AI project preview" src="assets/p1.png" width="800" height="500" loading="lazy"/>
         </div>
 
         <div class="p-8">
@@ -234,10 +249,10 @@
             </h3>
 
             <p class="text-on-surface-variant line-clamp-2">
-                AI-powered expense management platform using EasyOCR and OpenCV to automatically extract merchant names, dates, categories, and amounts from receipts.
+                Turns receipt images into structured expense details. EasyOCR and OpenCV extract merchant, date, category, and amount to reduce manual entry.
             </p>
 
-            <div class="flex justify-end mt-4">
+            <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
                 <span class="material-symbols-outlined text-primary">
                     open_in_new
                 </span>
@@ -255,7 +270,7 @@
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
         <img class="w-full h-full object-cover"
              alt="RedisLite"
-             src="assets/p11.png"/>
+             src="assets/p11.png" width="800" height="500" loading="lazy"/>
     </div>
 
     <div class="p-8">
@@ -278,10 +293,10 @@
         </h3>
 
         <p class="text-on-surface-variant line-clamp-2">
-            Redis-inspired in-memory key-value database featuring a custom RESP parser, multithreaded TCP server, LRU cache, TTL expiration, Write-Ahead Logging, and crash recovery.
+            A Redis-inspired in-memory key-value store built around a custom RESP parser and multithreaded TCP server, with LRU eviction, TTL expiration, write-ahead logging, and crash recovery.
         </p>
 
-        <div class="flex justify-end mt-4">
+        <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
             <span class="material-symbols-outlined text-primary">
                 open_in_new
             </span>
@@ -299,7 +314,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
 
 
 <div class="aspect-[16/10] overflow-hidden image-zoom-container">
-    <img class="w-full h-full object-cover" alt="API Rate Limiter Library" src="assets/p10.png"/>
+    <img class="w-full h-full object-cover" alt="API Rate Limiter Library preview" src="assets/p10.png" width="800" height="500" loading="lazy"/>
 </div>
 
 <div class="p-8">
@@ -313,10 +328,10 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
     </h3>
 
     <p class="text-on-surface-variant line-clamp-2">
-        Published Python library implementing Fixed Window, Sliding Window, Token Bucket, and Leaky Bucket algorithms with Redis support and Flask/FastAPI middleware integration.
+        Python library for protecting APIs from excessive requests. Compare Fixed Window, Sliding Window, Token Bucket, and Leaky Bucket strategies, with Redis support and Flask/FastAPI middleware.
     </p>
 
-    <div class="flex justify-end mt-4">
+    <div class="flex justify-between items-center mt-4"><span class="text-label-sm font-bold text-primary">VIEW ON GITHUB</span>
         <span class="material-symbols-outlined text-primary">
             open_in_new
         </span>
@@ -357,14 +372,14 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-            <a href="assets/certificates/oracle-ai-foundations.pdf"
-   target="_blank"
+                    <a href="assets/certificates/oracle-ai-foundations.pdf"
+   target="_blank" rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
         <img src="assets/certs/oracle-ai.png"
              alt="Oracle AI Foundations"
-             class="w-full h-full object-cover">
+             class="w-full h-full object-cover" width="800" height="500" loading="lazy">
     </div>
 
     <div class="p-8">
@@ -387,13 +402,13 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
     </div>
 </a>
 <a href="https://www.credly.com/badges/c1a520a4-4631-44fd-b7a9-362515fe721f/public_url"
-   target="_blank"
+   target="_blank" rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
         <img src="assets/certs/cloud-speech-api.png"
              alt="Cloud Speech API"
-             class="w-full h-full object-cover">
+             class="w-full h-full object-cover" width="800" height="500" loading="lazy">
     </div>
 
     <div class="p-8">
@@ -417,13 +432,13 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
     </div>
 </a>
 <a href="https://www.credly.com/badges/6e57cb34-ac38-4d2c-806e-789a9a3f3830/public_url"
-   target="_blank"
+   target="_blank" rel="noopener noreferrer"
    class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm block">
 
     <div class="aspect-[16/10] overflow-hidden image-zoom-container">
         <img src="assets/certs/ml-api-preparation.png"
              alt="Prepare Data for ML APIs"
-             class="w-full h-full object-cover">
+             class="w-full h-full object-cover" width="800" height="500" loading="lazy">
     </div>
 
     <div class="p-8">
@@ -478,9 +493,12 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
                             LINKEDIN
                         </a>
                         <a class="secondary-btn px-8 py-4 rounded-xl font-label-md inline-flex items-center justify-center gap-2"
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=keshavsharma71982@gmail.com">
+                        href="mailto:keshavsharma71982@gmail.com">
                             <span class="material-symbols-outlined">mail</span>
                             EMAIL ME
+                        </a>
+                        <a class="secondary-btn px-8 py-4 rounded-xl font-label-md inline-flex items-center justify-center gap-2" href="https://github.com/Keshav-spec" target="_blank" rel="noopener noreferrer">
+                            <span class="material-symbols-outlined">code</span> GITHUB
                         </a>
                     </div>
                 </div>
@@ -504,7 +522,7 @@ class="glass-card rounded-[2rem] overflow-hidden group border-none shadow-sm blo
             <div class="flex gap-stack-md font-body-md text-body-md text-secondary">
                 <a class="hover:text-primary transition-colors duration-300" href="https://www.linkedin.com/in/keshav-sharma-0396b1287/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a class="hover:text-primary transition-colors duration-300" href="https://github.com/Keshav-spec" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="hover:text-primary transition-colors duration-300" href="https://mail.google.com/mail/?view=cm&fs=1&to=keshavsharma71982@gmail.com">Email</a>
+                <a class="hover:text-primary transition-colors duration-300" href="mailto:keshavsharma71982@gmail.com">Email</a>
             </div>
             <div class="text-on-surface-variant text-label-sm"></div>
         </div>

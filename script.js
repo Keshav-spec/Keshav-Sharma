@@ -3,7 +3,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
         }
     });
 });
@@ -15,6 +16,13 @@ window.addEventListener('scroll', () => {
     } else {
         nav.classList.remove('bg-surface/95', 'shadow-sm');
     }
+});
+
+document.querySelectorAll('.mobile-menu-panel a').forEach(link => {
+    link.addEventListener('click', () => {
+        const menu = link.closest('details');
+        if (menu) menu.open = false;
+    });
 });
 
 document.querySelectorAll('.primary-btn').forEach(btn => {

@@ -4,6 +4,12 @@ body {
     overflow-x: hidden;
 }
 
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+a, button, summary { outline-offset: 4px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #8d4b00; }
+.mobile-menu-panel a { display: block; border-radius: .75rem; padding: .65rem .75rem; color: #554336; }
+.mobile-menu-panel a:hover, .mobile-menu-panel a:focus-visible { background: #f4f3f2; color: #8d4b00; }
+
 .glass-card {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
@@ -74,3 +80,7 @@ body {
 
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
